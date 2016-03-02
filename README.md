@@ -1,6 +1,15 @@
 # jstraps
 受[jstips](https://github.com/loverajoel/jstips)启发，咱也来个中文版的JavaScript那些坑，当然不仅限于JavaScript，也可以是HTML，CSSS等一切前端的坑，欢迎大家一起填坑。[格式请戳](/CONTRIBUTING.md)
 
+## #03 如何用正确的姿势使用touchstart
+>2016-01-21 by [@jiasm](https://github.com/jiasm)
+为避免某些奇葩浏览器以及桌面浏览器不支持touch系列的事件，所以需要进行特性检测
+```js
+var eventName = "ontouchstart" in document ? "touchstart" : "click";
+document.addEventListener(eventName, e => {
+    // do xxx
+})
+```
 ## #02 检测jquery对象是否存在
 >2016-01-21 by [@hingsir](https://github.com/hingsir)
 
