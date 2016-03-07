@@ -1,6 +1,14 @@
 # jstraps
 受[jstips](https://github.com/loverajoel/jstips)启发，咱也来个中文版的JavaScript那些坑，当然不仅限于JavaScript，也可以是HTML，CSSS等一切前端的坑，欢迎大家一起填坑。[格式请戳](/CONTRIBUTING.md)
 
+## #04 解决:active伪类在移动端中失效的问题
+>2016-03-04 by [@jiasm](https://github.com/jiasm)
+
+如果出现了这种情况 只需给window添加一个空的touchstart事件即可痊愈
+```js
+addEventListener&&addEventListener("touchstart", function () {});
+```
+
 ## #03 如何用正确的姿势使用touchstart
 >2016-03-02 by [@jiasm](https://github.com/jiasm)
 
