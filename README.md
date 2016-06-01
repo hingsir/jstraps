@@ -1,6 +1,19 @@
 # jstraps
 受[jstips](https://github.com/loverajoel/jstips)启发，咱也来个中文版的JavaScript那些坑，当然不仅限于JavaScript，也可以是HTML，CSSS等一切前端的坑，欢迎大家一起填坑。[格式请戳](/CONTRIBUTING.md)
 
+## #05 iOS webview非原生键盘（如搜狗）遮挡输入框解决方案
+>2016-06-01 by [@hingsir](https://github.com/hingsir)
+
+给输入框绑定focus事件
+```js
+$('input').on('focus', function(){
+    setTimeout(function () {
+        document.activeElement.scrollIntoViewIfNeeded();
+    }, 300);
+})
+```
+参考：[https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded)
+
 ## #04 解决:active伪类在移动端中失效的问题
 >2016-03-04 by [@jiasm](https://github.com/jiasm)
 
